@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>F-1 Feeder</title>
-  <link rel="stylesheet" type="text/css" href="app.css">
+  <link rel="stylesheet" type="text/css" href="app/app.css">
 </head>
 
 <body ng-app="F1FeederApp" ng-controller="driversController">
@@ -17,17 +17,17 @@
   <tbody>
   <tr ng-repeat="driver in driversList | filter: searchFilter">
     <td>{{$index + 1}}</td>
-    <td><img ng-src="img/flags/{{driver.Driver.nationality}}.png" /></td>
+    <td><img ng-src="app/img/flags/{{driver.Driver.nationality}}.png" /></td>
     <td>  {{driver.Driver.givenName}}&nbsp;{{driver.Driver.familyName}}</td>
     <td>{{driver.Constructors[0].name}}</td>
     <td>{{driver.points}}</td>
   </tr>
   </tbody>
 </table>
-<script src="components/angular/angular.js"></script>
-<script src="components/angular-route/angular-route.js"></script>
-<script src="app.js"></script>
-<script src="services.js"></script>
-<script src="controllers.js"></script>
+<script src="app/components/angular/angular.js"></script>
+<script src="app/components/angular-route/angular-route.js"></script>
+<script src="app/app.js"></script>
+<script src="app/services.js"></script>
+<script src="app/controllers.js"></script>
 </body>
 </html>
